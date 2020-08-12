@@ -1,25 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/NavBar/Navbar';
+import Post from './components/Post/Post'
 
-function App() {
+const articles = [
+
+  {
+    id: 1,
+    title: 'React Is Awesome',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, doloremque. Earum vero vel velit impedit repudiandae deserunt nam perspiciatis neque.',
+    author: 'John Doe',
+  },
+  {
+    id: 2,
+    title: 'Title of Article',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, doloremque. Earum vero vel velit impedit repudiandae deserunt nam perspiciatis neque.',
+    author: 'John Smith',
+  },
+  {
+    id: 3,
+    title: 'Pizza',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, doloremque. Earum vero vel velit impedit repudiandae deserunt nam perspiciatis neque.',
+    author: 'Sarah Doe',
+  },
+
+];
+
+
+function App(props) {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Navbar />
+      <div className="container">
+        <Post post={articles[0]} isPublic={true} />
+        <Post post={articles[1]} />
+        <Post post={articles[2]} />
+        <Post />
+      </div>
+
+
     </div>
+
   );
 }
 

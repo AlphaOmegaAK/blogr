@@ -1,0 +1,51 @@
+/* :root {
+    --primary-blue: #4986D1;
+    --seconday-blue: #37669E;
+    --dark-blue: #1D3451;
+    --default-text: #354252;
+
+} */
+
+
+nav {
+    background-color: var(--primary-blue);
+    color: wheat
+
+}
+
+nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0;
+
+}
+
+.nav-item {
+    padding: 10px;
+    margin-right: 10px;
+
+}
+
+.nav-item:hover {
+    background-color: var(--seconday-blue);
+
+}
+
+.nav-link {
+    color: beige;
+    text-decoration: none;
+
+}
